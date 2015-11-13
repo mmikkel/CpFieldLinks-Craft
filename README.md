@@ -14,7 +14,7 @@ _Did you forget what that one field's_ handle _was, again?_ Mouse over the cogwh
 1. Download, unzip and put the `cpfieldlinks` folder in `craft/plugins`
 2. Install from CP
 
-_Please note that `devMode` needs to be enabled for CP Field Links to work. Well, it doesn't actually _need_ to, but I designed it that way._
+_Please note that `devMode` needs to be enabled for CP Field Links to work. Well, it doesn't actually_ need _to, but I designed it that way._
 
 ## Disclaimer
 
