@@ -7,7 +7,7 @@ When `devMode` is enabled, CP Field Links will augment your element editing form
 
 _Did you forget what that one field's _handle_ was, again?_ Mouse over the cogwheel; CP Field Links will tell you.
 
-![Easily inspect field handles and edit fields](http://g.recordit.co/DjoQrWR2BD.gif)
+![Easily inspect field handles and edit fields](http://g.recordit.co/i8SOUKWYpq.gif)
 
 ## Installation
 
