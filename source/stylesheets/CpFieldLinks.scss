@@ -1,0 +1,99 @@
+.cpFieldLinks {
+    width: auto;
+    height: 13px;
+    float: right;
+    position: relative;
+    margin: 0 0 12px;
+    z-index: 2;
+    &.cpFieldLinks-sourceEdit {
+        float: left;
+    }
+    .cpFieldLinks-settings {
+        width: auto;
+        float: left;
+        position: relative;
+        z-index: 2;
+        a {
+            opacity: .25;
+            transition: opacity .25s ease-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .cpFieldLinks-info {
+        width: auto;
+        float: left;
+        p {
+            margin: 0;
+        }
+        code,
+        span {
+            display: inline-block;
+            padding: 0 4px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        code {
+            color: #8f98a3;
+            background-color: #EBEDEF;
+            border-radius: 3px;
+        }
+    }
+    &.cpFieldLinks-sourceEdit {
+        width: 100%;
+        margin-top: 20px;
+        .cpFieldLinks-wrapper {
+            width: auto;
+            float: left;
+            &:hover {
+                .cpFieldLinks-info {
+                    opacity: 1;
+                }
+            }
+        }
+        .cpFieldLinks-info {
+            position: absolute;
+            top: 1px; left: 18px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .25s ease-out;
+            color: #8f98a3;
+        }
+        .cpFieldLinks-settings a {
+            opacity: .5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &.cpFieldLinks-fieldEdit {
+        p {
+            transform: translate(0, 0) scale(.75, .75);
+            transform-origin: center right;
+            opacity: 0;
+            transition: opacity .1s ease-in, transform .15s ease-out;
+        }
+        .cpFieldLinks-info {
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .cpFieldLinks-settings a {
+            &:before {
+                color: #000;
+            }
+        }
+        &:hover {
+            p {
+                opacity: 1;
+                transform: translate(-20px, 0) scale(1, 1);
+            }
+            .cpFieldLinks-info {
+                pointer-events: auto;
+            }
+        }
+    }
+}
