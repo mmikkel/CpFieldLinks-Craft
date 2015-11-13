@@ -5,7 +5,7 @@ CP Field Links is a tiny utility plugin making content modelling a little bit ea
 
 When `devMode` is enabled, CP Field Links will augment your element editing forms with handy links to easily edit individual fields, or even element sources and field layouts.
 
-_Did you forget what that one field's _handle_ was, again?_ Mouse over the cogwheel; CP Field Links will tell you.
+_Did you forget what that one field's_ handle _was, again?_ Mouse over the cogwheel; CP Field Links will tell you.
 
 ![Easily inspect field handles and edit fields](http://g.recordit.co/i8SOUKWYpq.gif)
 
