@@ -102,7 +102,7 @@
 	        $field = $(this);
 	        fieldId = CpFieldLinks.getFieldIdFromAttribute($field.attr('id'));
 	        if (fieldId && fieldData.hasOwnProperty(fieldId)) {
-	            $field.find('.heading label').after(CpFieldLinks.templates.editFieldBtn(fieldData[fieldId]));
+	            $field.find('.heading:first label').after(CpFieldLinks.templates.editFieldBtn(fieldData[fieldId]));
 	            CpFieldLinks.fieldIds.push($field.attr('id'));
 	        }
 	    });
