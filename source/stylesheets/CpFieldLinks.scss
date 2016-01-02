@@ -41,11 +41,21 @@
         }
     }
     &.cpFieldLinks-sourceEdit {
+        
         width: 100%;
-        margin-top: 20px;
+        margin: 15px 0 20px;
+
         .cpFieldLinks-wrapper {
             width: auto;
             float: left;
+            &:before,
+            &:after {
+                content: " ";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }
             &:hover {
                 .cpFieldLinks-info {
                     opacity: 1;

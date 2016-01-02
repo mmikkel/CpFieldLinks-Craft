@@ -93,7 +93,7 @@ CpFieldLinks.render = function () {
                 break;
 
             case Craft.t('Entry Type') : case Craft.t('Category Group') :
-                $('#fields').append($editSourceButton);
+                $('#settings').append($editSourceButton);
                 break;
 
             default :

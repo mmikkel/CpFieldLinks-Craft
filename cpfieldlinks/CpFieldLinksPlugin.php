@@ -3,11 +3,16 @@
 class CpFieldLinksPlugin extends BasePlugin
 {
 
-    protected   $_version = '1.0',
+    protected   $_version = '1.0.1',
+                $_schemaVersion = null,
+                $_minVersion = '2.3',
                 $_pluginName = 'CP Field Links',
                 $_pluginUrl = 'https://github.com/mmikkel/CpFieldLinks-Craft',
                 $_developer = 'Mats Mikkel Rummelhoff',
-                $_developerUrl = 'http://mmikkel.no';
+                $_developerUrl = 'http://mmikkel.no',
+                $_description = 'Inspect field handles and easily edit field settings',
+                $_releaseFeedUrl = 'https://raw.githubusercontent.com/mmikkel/CpFieldLinks-Craft/master/releases.json',
+                $_documentationUrl = 'https://github.com/mmikkel/CpFieldLinks-Craft/blob/master/README.md';
 
     public function getName()
     {
@@ -17,6 +22,11 @@ class CpFieldLinksPlugin extends BasePlugin
     public function getVersion()
     {
         return $this->_version;
+    }
+
+    public function getSchemaVersion()
+    {
+        return $this->_schemaVersion;
     }
 
     public function getDeveloper()
@@ -34,16 +44,38 @@ class CpFieldLinksPlugin extends BasePlugin
         return $this->_pluginUrl;
     }
 
+    public function getReleaseFeedUrl()
+    {
+        return $this->_releaseFeedUrl;
+    }
+
+    public function getDescription()
+    {
+        return $this->_description;
+    }
+
+    public function getDocumentationUrl()
+    {
+        return $this->_documentationUrl;
+    }
+
     public function init()
     {
         parent::init();
 
         $request = craft()->request;
 
-        if (!$request->isCpRequest() || $request->isAjaxRequest() || !craft()->config->get('devMode')) return false;
+        if (!$request->isCpRequest() || $request->isAjaxRequest() || craft()->isConsole() || !$this->isCraftRequiredVersion() || !craft()->config->get('devMode')) {
+            return false;
+        }
 
         $this->addResources();
 
+    }
+
+    protected function isCraftRequiredVersion()
+    {
+        return version_compare(craft()->getVersion(), $this->_minVersion, '>=');
     }
 
     protected function addResources()
