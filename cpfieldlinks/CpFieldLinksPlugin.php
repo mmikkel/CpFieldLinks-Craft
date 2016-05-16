@@ -64,8 +64,9 @@ class CpFieldLinksPlugin extends BasePlugin
         parent::init();
 
         $request = craft()->request;
+        $currentUser = craft()->userSession->getUser();
 
-        if (!$request->isCpRequest() || $request->isAjaxRequest() || craft()->isConsole() || !$this->isCraftRequiredVersion() || !craft()->config->get('devMode')) {
+        if (!$currentUser || !$currentUser->admin || !$request->isCpRequest() || $request->isAjaxRequest() || craft()->isConsole() || !$this->isCraftRequiredVersion()) {
             return false;
         }
 
