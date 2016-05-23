@@ -3,7 +3,7 @@
 
 CP Field Links is a tiny utility plugin making content modelling a little bit easier in Craft.
 
-When `devMode` is enabled, CP Field Links will augment your element editing forms with handy links to easily edit individual fields, or even element sources and field layouts.
+For all admin users, CP Field Links will augment your element editing forms with handy links to easily edit individual fields, or even element sources and field layouts.
 
 _Did you forget what that one field's_ handle _was, again?_ Mouse over the cogwheel; CP Field Links will tell you.
 
@@ -13,8 +13,6 @@ _Did you forget what that one field's_ handle _was, again?_ Mouse over the cogwh
 
 1. Download, unzip and put the `cpfieldlinks` folder in `craft/plugins`
 2. Install from CP
-
-_Please note that `devMode` needs to be enabled for CP Field Links to work. Well, it doesn't actually_ need _to, but I designed it that way._
 
 ## Disclaimer
 
