@@ -1,5 +1,14 @@
 [
     {
+        "version": "1.1",
+        "downloadUrl": "https://github.com/mmikkel/CpFieldLinks-Craft/archive/master.zip",
+        "date": "2016-05-23T10:00:00-08:00",
+        "notes": [
+            "[Added] CP Field Links is now active/visible for all logged in admin users, regardless of devMode status.",
+            "[Fixed] Defined schema version"
+        ]
+    },
+    {
         "version": "1.0.1",
         "downloadUrl": "https://github.com/mmikkel/CpFieldLinks-Craft/archive/master.zip",
         "date": "2016-01-02T10:00:00-08:00",

@@ -1,5 +1,5 @@
 # CP Field Links
-## v. 1.0.1
+## v. 1.1
 
 CP Field Links is a tiny utility plugin making content modelling a little bit easier in Craft.
 
@@ -22,6 +22,10 @@ This plugin is totally free, and you can do whatever you want with it (and to it
 Please direct any bug reports or feature requests [here](https://github.com/mmikkel/CpFieldLinks-Craft/issues).
 
 ## Changelog
+
+### 1.1 (05.23.16)
+* [Added] CP Field Links is now active/visible for all logged in admin users, regardless of devMode status
+* [Fixed] Defined schema version
 
 ### 1.0.1 (01.12.16)
 * [Added] Added release feed, documentation URL and description

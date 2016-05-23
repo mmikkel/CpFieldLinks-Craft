@@ -3,8 +3,8 @@
 class CpFieldLinksPlugin extends BasePlugin
 {
 
-    protected   $_version = '1.0.1',
-                $_schemaVersion = null,
+    protected   $_version = '1.1',
+                $_schemaVersion = '1.0',
                 $_minVersion = '2.3',
                 $_pluginName = 'CP Field Links',
                 $_pluginUrl = 'https://github.com/mmikkel/CpFieldLinks-Craft',
