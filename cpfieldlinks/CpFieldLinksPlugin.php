@@ -3,7 +3,7 @@
 class CpFieldLinksPlugin extends BasePlugin
 {
 
-    protected   $_version = '1.1',
+    protected   $_version = '1.2',
                 $_schemaVersion = '1.0',
                 $_minVersion = '2.3',
                 $_pluginName = 'CP Field Links',
@@ -66,17 +66,39 @@ class CpFieldLinksPlugin extends BasePlugin
         $request = craft()->request;
         $currentUser = craft()->userSession->getUser();
 
-        if (!$currentUser || !$currentUser->admin || !$request->isCpRequest() || $request->isAjaxRequest() || craft()->isConsole() || !$this->isCraftRequiredVersion()) {
+        if (!$currentUser || !$currentUser->admin || !$request->isCpRequest() || craft()->isConsole() || !$this->isCraftRequiredVersion()) {
             return false;
         }
 
-        $this->addResources();
+        if (craft()->request->isAjaxRequest()) {
+            $this->ajaxInit();
+        } else {
+            $this->addResources();
+        }
 
     }
 
     protected function isCraftRequiredVersion()
     {
         return version_compare(craft()->getVersion(), $this->_minVersion, '>=');
+    }
+
+    protected function ajaxInit()
+    {
+
+        if (!craft()->request->isPostRequest()) {
+            return false;
+        }
+
+        $segments = craft()->request->segments;
+        $actionSegment = $segments[count($segments) - 1];
+
+        if ($actionSegment !== 'getEditorHtml') {
+            return false;
+        }
+
+        craft()->templates->includeJs('Craft.CpFieldLinksPlugin.initElementEditor();');
+
     }
 
     protected function addResources()
@@ -94,6 +116,7 @@ class CpFieldLinksPlugin extends BasePlugin
             'baseEditEntryTypeUrl' => rtrim(UrlHelper::getCpUrl('settings/sections/sectionId/entrytypes'), '/'),
             'baseEditGlobalSetUrl' => rtrim(UrlHelper::getCpUrl('settings/globals'), '/'),
             'baseEditCategoryGroupUrl' => rtrim(UrlHelper::getCpUrl('settings/categories'), '/'),
+            'baseEditCommerceProductTypeUrl' => rtrim(UrlHelper::getCpUrl('commerce/settings/producttypes'), '/'),
         ];
 
         $sectionIds = craft()->sections->allSectionIds;
@@ -118,17 +141,13 @@ class CpFieldLinksPlugin extends BasePlugin
             ];
         }
 
-        $data = json_encode($data);
-        craft()->templates->includeJs('window._CpFieldLinksData='.$data.';');
-
         // Include resources
         $cssFile = 'stylesheets/CpFieldLinks.css';
         $jsFile = 'javascripts/CpFieldLinks.js';
 
         craft()->templates->includeCssResource('cpfieldlinks/' . ($manifest ? $manifest->$cssFile : $cssFile));
         craft()->templates->includeJsResource('cpfieldlinks/' . ($manifest ? $manifest->$jsFile : $jsFile));
-
-
+        craft()->templates->includeJs('Craft.CpFieldLinksPlugin.init('.json_encode($data).');');
 
     }
 

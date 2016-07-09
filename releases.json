@@ -1,5 +1,19 @@
 [
     {
+        "version": "1.2",
+        "downloadUrl": "https://github.com/mmikkel/CpFieldLinks-Craft/archive/master.zip",
+        "date": "2016-07-09T10:00:00-08:00",
+        "notes": [
+            "[Added] Matrix support",
+            "[Added] Element Editor modals support",
+            "[Added] Full support for Craft Commerce (including variants)",
+            "[Added] Added 'Edit Product Type' link to Commerce Products",
+            "[Improved] Plugin now works as intended in Live Preview",
+            "[Improved] Field cogwheels are no longer tabbable",
+            "[Improved] Fixed position for 'Edit Entry Type' cogwheel"
+        ]
+    },
+    {
         "version": "1.1",
         "downloadUrl": "https://github.com/mmikkel/CpFieldLinks-Craft/archive/master.zip",
         "date": "2016-05-23T10:00:00-08:00",
