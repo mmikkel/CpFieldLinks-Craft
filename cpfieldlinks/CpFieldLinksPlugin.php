@@ -3,7 +3,7 @@
 class CpFieldLinksPlugin extends BasePlugin
 {
 
-    protected   $_version = '1.2',
+    protected   $_version = '1.2.1',
                 $_schemaVersion = '1.0',
                 $_minVersion = '2.3',
                 $_pluginName = 'CP Field Links',
@@ -109,21 +109,21 @@ class CpFieldLinksPlugin extends BasePlugin
         $manifest = (file_exists($manifestPath) && $manifest = file_get_contents($manifestPath)) ? json_decode($manifest) : false;
 
         // Get data
-        $data = [
-            'fields' => [],
-            'entryTypeIds' => [],
+        $data = array(
+            'fields' => array(),
+            'entryTypeIds' => array(),
             'baseEditFieldUrl' => rtrim(UrlHelper::getCpUrl('settings/fields/edit'), '/'),
             'baseEditEntryTypeUrl' => rtrim(UrlHelper::getCpUrl('settings/sections/sectionId/entrytypes'), '/'),
             'baseEditGlobalSetUrl' => rtrim(UrlHelper::getCpUrl('settings/globals'), '/'),
             'baseEditCategoryGroupUrl' => rtrim(UrlHelper::getCpUrl('settings/categories'), '/'),
             'baseEditCommerceProductTypeUrl' => rtrim(UrlHelper::getCpUrl('commerce/settings/producttypes'), '/'),
-        ];
+        );
 
         $sectionIds = craft()->sections->allSectionIds;
         foreach ($sectionIds as $sectionId)
         {
             $entryTypes = craft()->sections->getEntryTypesBySectionId($sectionId);
-            $data['entryTypeIds']['' . $sectionId] = [];
+            $data['entryTypeIds']['' . $sectionId] = array();
             foreach ($entryTypes as $entryType)
             {
                 $data['entryTypeIds']['' . $sectionId][] = $entryType->id;

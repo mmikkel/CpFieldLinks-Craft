@@ -1,5 +1,13 @@
 [
     {
+        "version": "1.2.1",
+        "downloadUrl": "https://github.com/mmikkel/CpFieldLinks-Craft/archive/master.zip",
+        "date": "2016-09-16T10:00:00-08:00",
+        "notes": [
+            "[Fixed] Fixed issue with PHP 5.3"
+        ]
+    },
+    {
         "version": "1.2",
         "downloadUrl": "https://github.com/mmikkel/CpFieldLinks-Craft/archive/master.zip",
         "date": "2016-07-09T10:00:00-08:00",
