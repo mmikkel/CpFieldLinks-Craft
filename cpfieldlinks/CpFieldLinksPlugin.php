@@ -3,7 +3,7 @@
 class CpFieldLinksPlugin extends BasePlugin
 {
 
-    protected   $_version = '1.2.1',
+    protected   $_version = '1.2.2',
                 $_schemaVersion = '1.0',
                 $_minVersion = '2.3',
                 $_pluginName = 'CP Field Links',
@@ -134,11 +134,11 @@ class CpFieldLinksPlugin extends BasePlugin
 
         foreach ($fields as $field)
         {
-            $data['fields'][$field->handle] = [
+            $data['fields'][$field->handle] = array(
                 'id' => $field->id,
                 'handle' => $field->handle,
                 'type' => $field->type,
-            ];
+            );
         }
 
         // Include resources

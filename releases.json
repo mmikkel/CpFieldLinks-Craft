@@ -1,5 +1,13 @@
 [
     {
+        "version": "1.2.2",
+        "downloadUrl": "https://github.com/mmikkel/CpFieldLinks-Craft/archive/master.zip",
+        "date": "2016-09-23T10:00:00-08:00",
+        "notes": [
+            "[Fixed] _Really_ fixes the missing PHP 5.3 support – thanks @monachilada"
+        ]
+    },
+    {
         "version": "1.2.1",
         "downloadUrl": "https://github.com/mmikkel/CpFieldLinks-Craft/archive/master.zip",
         "date": "2016-09-16T10:00:00-08:00",

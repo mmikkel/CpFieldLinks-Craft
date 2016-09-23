@@ -1,4 +1,4 @@
-# CP Field Links v. 1.2.1 for Craft CMS ![Craft 2.5](https://img.shields.io/badge/craft-2.5-red.svg?style=flat-square)
+# CP Field Links v. 1.2.2 for Craft CMS ![Craft 2.5](https://img.shields.io/badge/craft-2.5-red.svg?style=flat-square)
 
 CP Field Links is a tiny utility plugin making content modelling a little bit easier in Craft.  
 
@@ -27,6 +27,9 @@ This plugin is totally free, and you can do whatever you want with it (and to it
 Please direct any bug reports or feature requests [here](https://github.com/mmikkel/CpFieldLinks-Craft/issues).
 
 ## Changelog
+
+### 1.2.2 (09.23.16)
+* [Fixed] _Really_ fixes the missing PHP 5.3 support – thanks @monachilada
 
 ### 1.2.1 (09.16.16)
 * [Fixed] Fixes issue with PHP 5.3
