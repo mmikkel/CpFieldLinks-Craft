@@ -10,6 +10,9 @@ Additionally, CP Field Links will add a link in your element edit forms to manag
 
 Note that CP Field Links will only be active for **admin** users.  
 
+**Looking for the Craft 3 version?**  
+CP Field Links is available for Craft 3 (it has been renamed, though) – visit the [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft) repo.  
+
 **Recent updates**  
 * Now working inside Live Preview, Matrix and Element Editor modals
 * Full Craft Commerce support (including variants)
